@@ -44,7 +44,10 @@ export class baseService {
     return axios({
       url: `${DOMAIN}/${url}`,
       method: "DELETE",
-      headers: { Authorization: "Bearer " + localStorage.getItem(TOKEN) },
+      headers: {
+        Authorization: "Bearer " + localStorage.getItem(TOKEN),
+        [KEY_TOKEN]: STUDENT_TOKEN,
+      },
     });
   };
 }

@@ -16,11 +16,8 @@ import { UserTemplate } from "./templates/UserTemplate/UserTemplate";
 import Dashboard from "./pages/Admin/Dashboard/Dashboard";
 import AFilm from "./pages/Admin/AFilm/AFilm";
 import Showtime from "./pages/Admin/Showtime/Showtime";
-// import { Suspense, lazy } from "react";
-
-// const CheckoutTemplateLazy = lazy(() =>
-//   import("./templates/CheckOutTemplate/CheckOutTemplate")
-// );
+import AddFilm from "./pages/Admin/AFilm/AddFilm/AddFilm";
+import Edit from "./pages/Admin/AFilm/Edit/Edit";
 
 export const history = createBrowserHistory();
 function App() {
@@ -37,15 +34,15 @@ function App() {
         <CheckOutTemplate path="/checkout/:id" exact Component={CheckOut} />
 
         <AdminTemplate path="/admin/films" exact Component={AFilm} />
+        <AdminTemplate path="/admin/films/addfilm" exact Component={AddFilm} />
+        <AdminTemplate path="/admin/films/edit/:id" exact Component={Edit} />
         <AdminTemplate path="/admin/dashboards" exact Component={Dashboard} />
-        <AdminTemplate path="/admin/showtimes" exact Component={Showtime} />
-        {/* <Suspense>
-          <CheckoutTemplateLazy
-            path="/checkout/:id"
-            exact
-            Component={CheckOut}
-          />
-        </Suspense> */}
+        <AdminTemplate
+          path="/admin/films/showtime/:id/:tenPhim"
+          exact
+          Component={Showtime}
+        />
+
         <HomeTemplate path="/" exact Component={Home} />
       </Switch>
     </Router>

@@ -6,7 +6,7 @@ import {
 } from "@ant-design/icons";
 import "./AdminTemplate.css";
 import React, { useEffect } from "react";
-import { Redirect, Route } from "react-router-dom";
+import { NavLink, Redirect, Route } from "react-router-dom";
 import { USER_LOGIN } from "../../util/setting/confiq";
 import { useSelector } from "react-redux";
 
@@ -14,6 +14,7 @@ export const AdminTemplate = (props) => {
   const { Component, ...restProps } = props;
   const { Header, Content, Sider } = Layout;
   const { userLogin } = useSelector((state) => state.QuanLyNguoiDungReducer);
+  const { SubMenu } = Menu;
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -48,17 +49,16 @@ export const AdminTemplate = (props) => {
             >
               <div className="logo" />
               <Menu theme="dark" mode="inline" defaultSelectedKeys={["4"]}>
-                <Menu.Item key="1" icon={<UserOutlined />}>
-                  nav 1
-                </Menu.Item>
-                <Menu.Item key="2" icon={<VideoCameraOutlined />}>
-                  nav 2
-                </Menu.Item>
-                <Menu.Item key="3" icon={<UploadOutlined />}>
-                  nav 3
-                </Menu.Item>
-                <Menu.Item key="4" icon={<UserOutlined />}>
-                  nav 4
+                <SubMenu key="sub1" title="Films">
+                  <Menu.Item key="1">
+                    <NavLink to="/admin/films">Films </NavLink>
+                  </Menu.Item>
+                  <Menu.Item key="2">
+                    <NavLink to="/admin/films/addfilm">Add Films</NavLink>
+                  </Menu.Item>
+                </SubMenu>
+                <Menu.Item key="3" icon={<VideoCameraOutlined />}>
+                  Tạo lịch chiếu
                 </Menu.Item>
               </Menu>
             </Sider>

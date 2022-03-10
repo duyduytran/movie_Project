@@ -35,7 +35,7 @@ export default function Home(props) {
         </div>
       </section>
 
-      <div className="mx-44">
+      <div className="mx-44 mb-36">
         <HomeMenu heThongRapChieu={heThongRapChieu} />
       </div>
     </div>

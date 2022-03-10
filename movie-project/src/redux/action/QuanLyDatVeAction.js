@@ -21,7 +21,7 @@ export const layChiTietPhongVeAction = (maLichChieu) => {
 export const datVeAction = (thongTinDatVe) => {
   return async (dispatch) => {
     try {
-      const result = await quanLyDatVeService.datVe(thongTinDatVe);
+      let result = await quanLyDatVeService.datVe(thongTinDatVe);
       if (result.data.statusCode === 200) {
         alert("Bạn đã đặt vé thành công");
       }
