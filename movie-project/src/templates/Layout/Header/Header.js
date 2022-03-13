@@ -58,8 +58,8 @@ export default function Header(props) {
   return (
     <header className="p-4 dark:bg-coolGray-800 dark:text-coolGray-100 bg-opacity-40 bg-black text-white fixed w-full z-10">
       <div className="container flex justify-between h-16 mx-auto">
-        <a
-          href="#"
+        <NavLink
+          to="/"
           aria-label="Back to homepage"
           className="flex items-center p-2"
         >
@@ -70,7 +70,7 @@ export default function Header(props) {
             width={150}
             height={150}
           />
-        </a>
+        </NavLink>
         <ul className="items-stretch hidden space-x-3 lg:flex">
           <li className="flex">
             <NavLink
@@ -83,7 +83,7 @@ export default function Header(props) {
           </li>
           <li className="flex">
             <NavLink
-              to="/contact"
+              to="/"
               className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent text-white"
               activeClassName="border-b-2 border-white"
             >
@@ -92,7 +92,7 @@ export default function Header(props) {
           </li>
           <li className="flex">
             <NavLink
-              to="/news"
+              to="/"
               className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent text-white"
               activeClassName="border-b-2 border-white"
             >

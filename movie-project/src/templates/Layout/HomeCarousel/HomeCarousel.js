@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Carousel } from "antd";
 import { useSelector, useDispatch } from "react-redux";
 import { getCarouselAction } from "../../../redux/action/CarouselAction";
+import "./HomeCarousel.css";
 
 const contentStyle = {
   height: "400px",

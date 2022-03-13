@@ -39,7 +39,7 @@ export default function Detail(props) {
         }}
       >
         <div className="box1">
-          <div className="grid grid-cols-12">
+          <div className="grid grid-cols-12" style={{ paddingTop: "150px" }}>
             <div className="col-span-4 col-start-4">
               <div className="grid grid-cols-2">
                 <img src={filmDetail.hinhAnh} alt="..." />
