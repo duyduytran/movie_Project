@@ -24,6 +24,7 @@ export const datVeAction = (thongTinDatVe) => {
       let result = await quanLyDatVeService.datVe(thongTinDatVe);
       if (result.data.statusCode === 200) {
         alert("Bạn đã đặt vé thành công");
+        window.location.reload();
       }
       console.log("result", result.data.content);
     } catch (errors) {

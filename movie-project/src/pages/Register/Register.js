@@ -10,7 +10,7 @@ export default function Register(props) {
       taiKhoan: "",
       matKhau: "",
       email: "",
-      soDt: "",
+      soDT: "",
       maNhom: "",
       hoTen: "",
     },
@@ -70,7 +70,7 @@ focus:bg-white focus:outline-none"
           <label className="block text-gray-700">Số điện thoại:</label>
           <input
             onChange={formik.handleChange}
-            name="soDt"
+            name="soDT"
             placeholder="Số điện thoại"
             minLength={5}
             className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500
